@@ -1,0 +1,562 @@
+[
+  {
+    "asset": "level0",
+    "path_id": 533,
+    "class": "TextMeshProUGUI",
+    "source": "press any key",
+    "translation": "按任意键"
+  },
+  {
+    "asset": "level0",
+    "path_id": 534,
+    "class": "TextMeshProUGUI",
+    "source": "Quit Game",
+    "translation": "退出游戏"
+  },
+  {
+    "asset": "level0",
+    "path_id": 536,
+    "class": "TextMeshProUGUI",
+    "source": "Speedrun",
+    "translation": "速通"
+  },
+  {
+    "asset": "level0",
+    "path_id": 537,
+    "class": "TextMeshProUGUI",
+    "source": "MOVE",
+    "translation": "移动"
+  },
+  {
+    "asset": "level0",
+    "path_id": 540,
+    "class": "TextMeshProUGUI",
+    "source": "Potions: {0}/{1}",
+    "translation": "药水：{0}/{1}"
+  },
+  {
+    "asset": "level0",
+    "path_id": 541,
+    "class": "TextMeshProUGUI",
+    "source": "SPEEDRUN",
+    "translation": "速通模式"
+  },
+  {
+    "asset": "level0",
+    "path_id": 542,
+    "class": "TextMeshProUGUI",
+    "source": "A game by",
+    "translation": "制作"
+  },
+  {
+    "asset": "level0",
+    "path_id": 544,
+    "class": "TextMeshProUGUI",
+    "source": "Restore Defaults",
+    "translation": "恢复默认"
+  },
+  {
+    "asset": "level0",
+    "path_id": 546,
+    "class": "TextMeshProUGUI",
+    "source": "STARTING STAGE",
+    "translation": "起始关卡"
+  },
+  {
+    "asset": "level0",
+    "path_id": 548,
+    "class": "TextMeshProUGUI",
+    "source": "SHOW MILLISECONDS",
+    "translation": "显示毫秒"
+  },
+  {
+    "asset": "level0",
+    "path_id": 549,
+    "class": "TextMeshProUGUI",
+    "source": "Website",
+    "translation": "官方网站"
+  },
+  {
+    "asset": "level0",
+    "path_id": 550,
+    "class": "TextMeshProUGUI",
+    "source": "DYNAMIC CAMERA",
+    "translation": "动态镜头"
+  },
+  {
+    "asset": "level0",
+    "path_id": 551,
+    "class": "TextMeshProUGUI",
+    "source": "Discord",
+    "translation": "社区"
+  },
+  {
+    "asset": "level0",
+    "path_id": 553,
+    "class": "TextMeshProUGUI",
+    "source": "SHOW BEST TIME",
+    "translation": "显示最佳时间"
+  },
+  {
+    "asset": "level0",
+    "path_id": 554,
+    "class": "TextMeshProUGUI",
+    "source": "PAUSE MENU",
+    "translation": "暂停菜单"
+  },
+  {
+    "asset": "level0",
+    "path_id": 555,
+    "class": "TextMeshProUGUI",
+    "source": "Controls",
+    "translation": "操作设置"
+  },
+  {
+    "asset": "level0",
+    "path_id": 557,
+    "class": "TextMeshProUGUI",
+    "source": "         Music by Johan Soriao",
+    "translation": "音乐：Johan Soriao"
+  },
+  {
+    "asset": "level0",
+    "path_id": 559,
+    "class": "TextMeshProUGUI",
+    "source": "Camera & Audio",
+    "translation": "镜头与音频"
+  },
+  {
+    "asset": "level0",
+    "path_id": 561,
+    "class": "TextMeshProUGUI",
+    "source": "CAMERA & AUDIO",
+    "translation": "镜头与音频"
+  },
+  {
+    "asset": "level0",
+    "path_id": 564,
+    "class": "TextMeshProUGUI",
+    "source": "Length: {0}",
+    "translation": "长度：{0}"
+  },
+  {
+    "asset": "level0",
+    "path_id": 565,
+    "class": "TextMeshProUGUI",
+    "source": "SFX\n",
+    "translation": "音效\n"
+  },
+  {
+    "asset": "level0",
+    "path_id": 567,
+    "class": "TextMeshProUGUI",
+    "source": "Playtime: {0}",
+    "translation": "游玩时间：{0}"
+  },
+  {
+    "asset": "level0",
+    "path_id": 568,
+    "class": "TextMeshProUGUI",
+    "source": "SHOW LAPS",
+    "translation": "显示分段"
+  },
+  {
+    "asset": "level0",
+    "path_id": 569,
+    "class": "TextMeshProUGUI",
+    "source": "CREDITS",
+    "translation": "制作人员"
+  },
+  {
+    "asset": "level0",
+    "path_id": 570,
+    "class": "TextMeshProUGUI",
+    "source": " Back",
+    "translation": "返回"
+  },
+  {
+    "asset": "level0",
+    "path_id": 571,
+    "class": "TextMeshProUGUI",
+    "source": "DEEPEST\nSWORD",
+    "translation": "最深之剑"
+  },
+  {
+    "asset": "level0",
+    "path_id": 572,
+    "class": "TextMeshProUGUI",
+    "source": "Credits",
+    "translation": "制作人员"
+  },
+  {
+    "asset": "level0",
+    "path_id": 573,
+    "class": "TextMeshProUGUI",
+    "source": "Thanks for playing!",
+    "translation": "感谢游玩！"
+  },
+  {
+    "asset": "level0",
+    "path_id": 574,
+    "class": "TextMeshProUGUI",
+    "source": "Best: {0}",
+    "translation": "最佳：{0}"
+  },
+  {
+    "asset": "level0",
+    "path_id": 576,
+    "class": "TextMeshProUGUI",
+    "source": "Twitter",
+    "translation": "推特"
+  },
+  {
+    "asset": "level0",
+    "path_id": 577,
+    "class": "TextMeshProUGUI",
+    "source": "FULL RESET",
+    "translation": "完全重置"
+  },
+  {
+    "asset": "level0",
+    "path_id": 578,
+    "class": "TextMeshProUGUI",
+    "source": "Leaderboards on Speedrun.com",
+    "translation": "Speedrun.com 排行榜"
+  },
+  {
+    "asset": "level0",
+    "path_id": 579,
+    "class": "TextMeshProUGUI",
+    "source": "         Programming by Vu Ha",
+    "translation": "程序：Vu Ha"
+  },
+  {
+    "asset": "level0",
+    "path_id": 581,
+    "class": "TextMeshProUGUI",
+    "source": "Right",
+    "translation": "右"
+  },
+  {
+    "asset": "level0",
+    "path_id": 582,
+    "class": "TextMeshProUGUI",
+    "source": "CAMERA SHAKE",
+    "translation": "镜头震动"
+  },
+  {
+    "asset": "level0",
+    "path_id": 585,
+    "class": "TextMeshProUGUI",
+    "source": "by Cosmic Adventure Squad",
+    "translation": "Cosmic Adventure Squad 制作"
+  },
+  {
+    "asset": "level0",
+    "path_id": 586,
+    "class": "TextMeshProUGUI",
+    "source": "CONGRATULATIONS",
+    "translation": "恭喜通关"
+  },
+  {
+    "asset": "level0",
+    "path_id": 588,
+    "class": "TextMeshProUGUI",
+    "source": "buy us coffee!",
+    "translation": "请我们喝咖啡！"
+  },
+  {
+    "asset": "level0",
+    "path_id": 589,
+    "class": "TextMeshProUGUI",
+    "source": "Left",
+    "translation": "左"
+  },
+  {
+    "asset": "level0",
+    "path_id": 590,
+    "class": "TextMeshProUGUI",
+    "source": "CONTROLS",
+    "translation": "操作"
+  },
+  {
+    "asset": "level0",
+    "path_id": 592,
+    "class": "TextMeshProUGUI",
+    "source": "RESPAWN",
+    "translation": "重生"
+  },
+  {
+    "asset": "level0",
+    "path_id": 593,
+    "class": "TextMeshProUGUI",
+    "source": "SWORD",
+    "translation": "剑"
+  },
+  {
+    "asset": "level0",
+    "path_id": 594,
+    "class": "TextMeshProUGUI",
+    "source": "         Art by Rose Peng",
+    "translation": "美术：Rose Peng"
+  },
+  {
+    "asset": "level0",
+    "path_id": 595,
+    "class": "TextMeshProUGUI",
+    "source": "Completion Time",
+    "translation": "通关时间"
+  },
+  {
+    "asset": "level0",
+    "path_id": 596,
+    "class": "TextMeshProUGUI",
+    "source": "MUSIC",
+    "translation": "音乐"
+  },
+  {
+    "asset": "level0",
+    "path_id": 597,
+    "class": "TextMeshProUGUI",
+    "source": "click to restart",
+    "translation": "点击重新开始"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 171,
+    "class": "DialogData",
+    "source": "Venture deep into<br>the Cavern of Longing.",
+    "translation": "深入<br>渴望洞窟。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 171,
+    "class": "DialogData",
+    "source": "Drive it deeper in this time.",
+    "translation": "这次刺得更深些。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 171,
+    "class": "DialogData",
+    "source": "Be careful of its weight.",
+    "translation": "小心它的重量。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 171,
+    "class": "DialogData",
+    "source": "Such length may be troublesome.",
+    "translation": "这么长可能不太好使。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 171,
+    "class": "DialogData",
+    "source": "It is the Deepest Sword!",
+    "translation": "这就是最深之剑！"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 172,
+    "class": "DialogData",
+    "source": "Long the Dragon<br>lies ahead...",
+    "translation": "前方沉睡着<br>恶龙……"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 172,
+    "class": "DialogData",
+    "source": "The cavern looks deeper<br>than before.",
+    "translation": "洞窟似乎比以前<br>更深了。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 172,
+    "class": "DialogData",
+    "source": "It's getting deeper and deeper.",
+    "translation": "越来越深了。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 172,
+    "class": "DialogData",
+    "source": "It's even deeper now.<br>Don't give up.",
+    "translation": "现在更深了。<br>别放弃。"
+  },
+  {
+    "asset": "sharedassets1.assets",
+    "path_id": 172,
+    "class": "DialogData",
+    "source": "So deep...",
+    "translation": "好深……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 508,
+    "class": "TextMeshPro",
+    "source": "Press R to \nreturn to checkpoints",
+    "translation": "按 R 键\n返回检查点"
+  },
+  {
+    "asset": "level1",
+    "path_id": 509,
+    "class": "TextMeshPro",
+    "source": "Use mouse buttons \nor left and right arrows\nto rotate your sword",
+    "translation": "使用鼠标按键\n或左右方向键\n旋转你的剑"
+  },
+  {
+    "asset": "level1",
+    "path_id": 510,
+    "class": "TextMeshPro",
+    "source": "Understanding the pivot is key...",
+    "translation": "掌握支点是关键……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 511,
+    "class": "TextMeshPro",
+    "source": "Stab its heart!\nv",
+    "translation": "刺进它的心脏！\nv"
+  },
+  {
+    "asset": "level1",
+    "path_id": 512,
+    "class": "TextMeshPro",
+    "source": "Use A and D to move",
+    "translation": "使用 A 和 D 移动"
+  },
+  {
+    "asset": "level1",
+    "path_id": 513,
+    "class": "TextMeshPro",
+    "source": "Reach for it...",
+    "translation": "再往前一点……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 514,
+    "class": "TextMeshPro",
+    "source": "A slow fall slips less...",
+    "translation": "慢慢下落更不易打滑……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 515,
+    "class": "TextMeshProUGUI",
+    "source": "This is a test dialog text\nSecond Line",
+    "translation": "这是一段测试对话\n第二行"
+  },
+  {
+    "asset": "level1",
+    "path_id": 516,
+    "class": "TextMeshProUGUI",
+    "source": "This is a test dialog text\nSecond Line",
+    "translation": "这是一段测试对话\n第二行"
+  },
+  {
+    "asset": "level1",
+    "path_id": 517,
+    "class": "TextMeshProUGUI",
+    "source": "This is a test dialog text\nSecond Line",
+    "translation": "这是一段测试对话\n第二行"
+  },
+  {
+    "asset": "level1",
+    "path_id": 524,
+    "class": "SwordTrigger",
+    "source": "He he, that tickles.",
+    "translation": "嘿嘿，好痒。"
+  },
+  {
+    "asset": "level1",
+    "path_id": 524,
+    "class": "SwordTrigger",
+    "source": "I've lengthened your blade a bit more.",
+    "translation": "我又把你的剑加长了一些。"
+  },
+  {
+    "asset": "level1",
+    "path_id": 549,
+    "class": "SwordTrigger",
+    "source": "AAHHH!!!",
+    "translation": "啊啊啊！！！"
+  },
+  {
+    "asset": "level1",
+    "path_id": 559,
+    "class": "SwordTrigger",
+    "source": "Is it even in?",
+    "translation": "真的刺进来了吗？"
+  },
+  {
+    "asset": "level1",
+    "path_id": 559,
+    "class": "SwordTrigger",
+    "source": "I've brought you back.<br>I've made your blade longer.",
+    "translation": "我把你救回来了。<br>也把你的剑加长了。"
+  },
+  {
+    "asset": "level1",
+    "path_id": 560,
+    "class": "SwordTrigger",
+    "source": "Ah, felt something that time...",
+    "translation": "啊，这次有点感觉了……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 560,
+    "class": "SwordTrigger",
+    "source": "It's almost at the limits.<br>You'll notice its weight.",
+    "translation": "快到极限了。<br>你会感觉到它的重量。"
+  },
+  {
+    "asset": "level1",
+    "path_id": 578,
+    "class": "SwordTrigger",
+    "source": "Oh, so deep...",
+    "translation": "哦，好深……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 578,
+    "class": "SwordTrigger",
+    "source": "You hold the longest sword in the land!",
+    "translation": "你拥有这片土地上最长的剑！"
+  },
+  {
+    "asset": "level1",
+    "path_id": 580,
+    "class": "GreetingTrigger",
+    "source": "Who dares challenge me!?<br>Take your best stab!",
+    "translation": "谁敢挑战我！？<br>使出你最强的一刺吧！"
+  },
+  {
+    "asset": "level1",
+    "path_id": 580,
+    "class": "GreetingTrigger",
+    "source": "Here to try again?",
+    "translation": "又来挑战了？"
+  },
+  {
+    "asset": "level1",
+    "path_id": 580,
+    "class": "GreetingTrigger",
+    "source": "Lets see what you got.",
+    "translation": "让我看看你的本事。"
+  },
+  {
+    "asset": "level1",
+    "path_id": 580,
+    "class": "GreetingTrigger",
+    "source": "What a long sword you have...",
+    "translation": "你的剑可真长……"
+  },
+  {
+    "asset": "level1",
+    "path_id": 580,
+    "class": "GreetingTrigger",
+    "source": "Uhh, wait a minute!",
+    "translation": "呃，等一下！"
+  }
+]
