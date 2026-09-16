@@ -47,6 +47,39 @@
 			display: none;
 		}
 
+		.load-progress {
+			width: min(360px, calc(100vw - 48px));
+		}
+
+		.load-title {
+			margin-bottom: 12px;
+			color: #f2f3f5;
+			font-size: 16px;
+			text-align: center;
+		}
+
+		.load-track {
+			height: 8px;
+			overflow: hidden;
+			border: 1px solid #41464e;
+			background: #171b20;
+		}
+
+		.load-fill {
+			width: 0;
+			height: 100%;
+			background: #79c7b5;
+			transition: width 120ms linear;
+		}
+
+		.load-meta {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 8px;
+			font-size: 12px;
+			font-variant-numeric: tabular-nums;
+		}
+
 		#localizationNotice {
 			box-sizing: border-box;
 			height: 116px;
@@ -81,7 +114,15 @@
 
 <body>
 	<div id="gameStage">
-		<div id="loadStatus">正在加载汉化版……</div>
+		<div id="loadStatus" role="status" aria-live="polite">
+			<div class="load-progress">
+				<div class="load-title">正在加载汉化版</div>
+				<div id="loadTrack" class="load-track" role="progressbar" aria-label="游戏加载进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+					<div id="loadFill" class="load-fill"></div>
+				</div>
+				<div class="load-meta"><span id="loadPhase">准备资源</span><span id="loadPercent">0%</span></div>
+			</div>
+		</div>
 		<div id="gameContainer">
 			<canvas id="unity-canvas"></canvas>
 		</div>
@@ -95,23 +136,69 @@
 	<script src="Build/fflate.min.js"></script>
 	<script src="Build/WebBuilds.loader.js"></script>
 	<script>
-		async function decompressGzip(url, mimeType) {
-			var response = await fetch(url);
+		var assets = [
+			{ url: "Build/WebBuilds.data.gz", mime: "application/octet-stream", size: 4598760 },
+			{ url: "Build/WebBuilds.framework.js.gz", mime: "text/javascript", size: 87661 },
+			{ url: "Build/WebBuilds.wasm.gz", mime: "application/wasm", size: 4882774 }
+		];
+		var totalDownloadBytes = assets.reduce(function (total, asset) { return total + asset.size; }, 0);
+		var downloadedBytes = assets.map(function () { return 0; });
+
+		function setProgress(value, phase) {
+			var percent = Math.max(0, Math.min(100, Math.round(value)));
+			document.querySelector("#loadFill").style.width = percent + "%";
+			document.querySelector("#loadTrack").setAttribute("aria-valuenow", String(percent));
+			document.querySelector("#loadPercent").textContent = percent + "%";
+			document.querySelector("#loadPhase").textContent = phase;
+		}
+
+		function updateDownloadProgress() {
+			var loaded = downloadedBytes.reduce(function (total, value) { return total + value; }, 0);
+			setProgress(70 * loaded / totalDownloadBytes, "正在下载资源");
+		}
+
+		async function downloadGzip(asset, index) {
+			var response = await fetch(asset.url);
 			if (!response.ok) {
-				throw new Error("资源下载失败：" + url);
+				throw new Error("资源下载失败：" + asset.url);
 			}
-			var compressed = new Uint8Array(await response.arrayBuffer());
-			var decompressed = fflate.gunzipSync(compressed);
-			return URL.createObjectURL(new Blob([decompressed], { type: mimeType }));
+			if (!response.body) {
+				var fallback = new Uint8Array(await response.arrayBuffer());
+				downloadedBytes[index] = asset.size;
+				updateDownloadProgress();
+				return fallback;
+			}
+			var reader = response.body.getReader();
+			var chunks = [];
+			var length = 0;
+			while (true) {
+				var result = await reader.read();
+				if (result.done) break;
+				chunks.push(result.value);
+				length += result.value.length;
+				downloadedBytes[index] = Math.min(length, asset.size);
+				updateDownloadProgress();
+			}
+			var compressed = new Uint8Array(length);
+			var offset = 0;
+			chunks.forEach(function (chunk) {
+				compressed.set(chunk, offset);
+				offset += chunk.length;
+			});
+			downloadedBytes[index] = asset.size;
+			updateDownloadProgress();
+			return compressed;
 		}
 
 		async function boot() {
 			var status = document.querySelector("#loadStatus");
-			var urls = await Promise.all([
-				decompressGzip("Build/WebBuilds.data.gz", "application/octet-stream"),
-				decompressGzip("Build/WebBuilds.framework.js.gz", "text/javascript"),
-				decompressGzip("Build/WebBuilds.wasm.gz", "application/wasm")
-			]);
+			setProgress(0, "正在下载资源");
+			var compressedAssets = await Promise.all(assets.map(downloadGzip));
+			var urls = compressedAssets.map(function (compressed, index) {
+				setProgress(70 + (index + 1) / assets.length * 10, "正在解压资源");
+				var decompressed = fflate.gunzipSync(compressed);
+				return URL.createObjectURL(new Blob([decompressed], { type: assets[index].mime }));
+			});
 			var instance = await createUnityInstance(document.querySelector("#unity-canvas"), {
 				dataUrl: urls[0],
 				frameworkUrl: urls[1],
@@ -120,7 +207,10 @@
 				companyName: "Cosmic Adventure Squad",
 				productName: "最深之剑",
 				productVersion: "0.1.5c",
+			}, function (progress) {
+				setProgress(80 + progress * 20, "正在启动游戏");
 			});
+			setProgress(100, "加载完成");
 			status.hidden = true;
 			urls.forEach(URL.revokeObjectURL);
 				var canvas = instance.Module.canvas;
@@ -162,7 +252,8 @@
 		}
 
 		boot().catch(function (error) {
-			document.querySelector("#loadStatus").textContent = "加载失败：" + error.message;
+			document.querySelector(".load-title").textContent = "加载失败";
+			document.querySelector("#loadPhase").textContent = error.message;
 			console.error(error);
 		});
 	</script>
